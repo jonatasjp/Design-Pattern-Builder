@@ -8,17 +8,18 @@ public abstract class PizzaBuilder {
 		return pizza;
 	}
 
-	public void criaNovoProdutoPizza() {
+	public PizzaBuilder criaNovoProdutoPizza() {
 		pizza = new ProdutoPizza();
+		return this;
 	}
 
-	public abstract void defineTipoPizza();
+	public abstract PizzaBuilder defineTipoPizza();
 
-	public abstract void defineTamPizza(String tamPizza);
+	public abstract PizzaBuilder defineTamPizza(String tamPizza);
 
-	public abstract void defineMassa();
+	public abstract PizzaBuilder defineMassa();
 
-	public abstract void defineMolho();
+	public abstract PizzaBuilder defineMolho();
 
-	public abstract void defineCobertura();
+	public abstract PizzaBuilder defineCobertura();
 }

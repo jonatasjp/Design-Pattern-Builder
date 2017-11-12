@@ -2,27 +2,32 @@ package implementacao2;
 
 public class PizzaMargueritaBuilder extends PizzaBuilder {
 	@Override
-	public void defineTipoPizza() {
+	public PizzaBuilder defineTipoPizza() {
 		pizza.defineTipoPizza("Marguerita");
+		return this;
 	}
 
 	@Override
-	public void defineTamPizza(String tamPizza) {
+	public PizzaBuilder defineTamPizza(String tamPizza) {
 		pizza.defineTamPizza(tamPizza);
+		return this;
 	}
 
 	@Override
-	public void defineMassa() {
+	public PizzaBuilder defineMassa() {
 		pizza.defineMassa("fina");
+		return this;
 	}
 
 	@Override
-	public void defineMolho() {
+	public PizzaBuilder defineMolho() {
 		pizza.defineMolho("tomate");
+		return this;
 	}
 
 	@Override
-	public void defineCobertura() {
+	public PizzaBuilder defineCobertura() {
 		pizza.defineCobertura("tomate+orégano");
+		return this;
 	}
 }

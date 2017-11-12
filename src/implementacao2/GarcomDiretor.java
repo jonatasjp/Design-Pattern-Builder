@@ -10,14 +10,14 @@ public class GarcomDiretor {
 	}
 
 	public ProdutoPizza montaPizza(String tamPizza) {
-		// (4.1) cria novo Produto, agora com tamanho definido!
-		pizzaBuilder.criaNovoProdutoPizza();
-		pizzaBuilder.defineTipoPizza();
-		pizzaBuilder.defineTamPizza(tamPizza);
-		pizzaBuilder.defineMassa();
-		pizzaBuilder.defineMolho();
-		pizzaBuilder.defineCobertura();
-		// (4.2) entrega produto
-		return pizzaBuilder.getPizza();
+		
+		return pizzaBuilder.criaNovoProdutoPizza()
+		.defineTamPizza(tamPizza)
+		.defineTipoPizza()
+		.defineMassa()
+		.defineMolho()
+		.defineCobertura()
+		.getPizza();
+	
 	}
 }
