@@ -9,9 +9,11 @@ public abstract class PizzaBuilder {
 	}
 
 	public PizzaBuilder criaNovoProdutoPizza() {
-		pizza = new ProdutoPizza();
+		pizza = criarProdutoFactoryMethod();
 		return this;
 	}
+	
+	protected abstract ProdutoPizza criarProdutoFactoryMethod();
 
 	public abstract PizzaBuilder defineTipoPizza();
 

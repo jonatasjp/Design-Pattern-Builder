@@ -1,6 +1,12 @@
 package implementacao2;
 
 public class PizzaPortuguesaBuilder extends PizzaBuilder {
+	
+	@Override
+	protected ProdutoPizza criarProdutoFactoryMethod() {
+		return new ProdutoPizzaPortuguesa();
+	}
+	
 	@Override
 	public PizzaBuilder defineTipoPizza() {
 		pizza.defineTipoPizza("Portuguesa");
