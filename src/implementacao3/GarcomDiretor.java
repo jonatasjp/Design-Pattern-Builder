@@ -9,12 +9,12 @@ public class GarcomDiretor {
 		return this;
 	}
 	
-	public Pizza montarPizza(){
+	public Pizza montarPizza(String tamPizza){
 		return builder
 			   .defineCobertura()
 			   .defineMassa()
 			   .defineMolho()
-			   .defineTamPizza("grande")
+			   .defineTamPizza(tamPizza)
 			   .defineTipoPizza()
 			   .build();
 	}
@@ -23,7 +23,7 @@ public class GarcomDiretor {
 		
 		new GarcomDiretor()
 				.defineBuilder(new PizzaItalianaBuilder())
-				.montarPizza()
+				.montarPizza("grande")
 				.exibePizza();
 		
 	}
